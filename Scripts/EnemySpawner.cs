@@ -1,4 +1,5 @@
-using Unity.Collections;
+// Este archivo no es usado.
+
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -9,9 +10,8 @@ public class EnemySpawner : MonoBehaviour
     public float xLimit = 8;
     public float maxLifeTime = 5f;
 
-    private float spawnNext = 0; 
+    private float spawnNext = 0;
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time > spawnNext)
@@ -22,9 +22,6 @@ public class EnemySpawner : MonoBehaviour
 
             Vector2 spawnPosition = new Vector2(random, 8f);
             GameObject Meteor = Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
-
-            Destroy(Meteor,maxLifeTime);
-            
         }
 
 
